@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | TruthDose Blogs</title>
+
+    <meta
+        name="description"
+        content="Contact TruthDose Blogs for questions, suggestions, feedback, or collaborations."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                Truth<span>Dose</span>
+                <small>Blogs</small>
+            </a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="blog.html">Blog</a>
+                <a href="index.html#categories">Categories</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTACT -->
+    <main>
+
+        <section class="contact-page-header">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    GET IN TOUCH
+                </p>
+
+                <h1>
+                    Contact <span>TruthDose Blogs</span>
+                </h1>
+
+                <p>
+                    Have a question, suggestion, feedback, or collaboration
+                    idea? Send us a message.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="contact-section">
+
+            <div class="container contact-grid">
+
+                <!-- CONTACT INFORMATION -->
+                <div class="contact-info">
+
+                    <p class="eyebrow">
+                        CONTACT US
+                    </p>
+
+                    <h2>
+                        We'd love to hear from you.
+                    </h2>
+
+                    <p>
+                        You can contact us for general questions,
+                        article suggestions, corrections, feedback,
+                        or collaboration opportunities.
+                    </p>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            ✉️
+                        </div>
+
+                        <div>
+                            <h3>Email</h3>
+                            <p>
+                                hello@truthdoseblogs.com
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            💡
+                        </div>
+
+                        <div>
+                            <h3>Suggestions</h3>
+                            <p>
+                                Tell us what you would like to read
+                                on TruthDose Blogs.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            🤝
+                        </div>
+
+                        <div>
+                            <h3>Collaborations</h3>
+                            <p>
+                                We are open to suitable content
+                                and collaboration opportunities.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTACT FORM -->
+                <div class="contact-form-card">
+
+                    <form id="contactForm">
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Your Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="contactEmail">
+                                Your Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="contactEmail"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="subject">
+                                Subject
+                            </label>
+
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                placeholder="What is your message about?"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="7"
+                                placeholder="Write your message..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Send Message
+                        </button>
+
+                        <p
+                            id="contactMessage"
+                            class="form-message"
+                            aria-live="polite"
+                        ></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container footer-container">
+
+            <div>
+
+                <a href="index.html" class="logo footer-logo">
+                    Truth<span>Dose</span>
+                    <small>Blogs</small>
+                </a>
+
+                <p>
+                    Ideas, insights and stories worth reading.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container copyright">
+
+            <p>
+                © <span id="year"></span> TruthDose Blogs.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        const contactForm =
+            document.getElementById("contactForm");
+
+        const contactMessage =
+            document.getElementById("contactMessage");
+
+        if (contactForm) {
+
+            contactForm.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+                    contactMessage.textContent =
+                        "Thank you! Your message has been recorded for this demo.";
+
+                    contactForm.reset();
+
+                }
+            );
+
+        }
+
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+    </script>
+
+</body>
+</html>
